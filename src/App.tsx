@@ -8,6 +8,7 @@ function App() {
 	const toggleCart = () => {
 		dispatch(uiActions.toggleCart());
 	};
+  
 	return (
 		<>
 			<button onClick={toggleCart}>Toggle cart view</button>
