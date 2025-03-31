@@ -18,7 +18,7 @@ const DUMMY_PRODUCTS: Product[] = [
 		name: 'Wireless Earbuds',
 		price: 49.99,
 		description: 'High-quality Bluetooth earbuds with noise cancellation.',
-		image: '1.png',
+		image: '1.jpeg',
 	},
 	{
 		id: 2,
@@ -26,14 +26,14 @@ const DUMMY_PRODUCTS: Product[] = [
 		price: 199.99,
 		description:
 			'Feature-packed smartwatch with fitness tracking and notifications.',
-		image: '1.png',
+		image: '2.jpeg',
 	},
 	{
 		id: 3,
 		name: 'Gaming Mouse',
 		price: 29.99,
 		description: 'Ergonomic gaming mouse with customizable RGB lighting.',
-		image: '1.png',
+		image: '3.jpeg',
 	},
 	{
 		id: 4,
@@ -41,7 +41,7 @@ const DUMMY_PRODUCTS: Product[] = [
 		price: 79.99,
 		description:
 			'Compact and powerful speaker with deep bass and waterproof design.',
-		image: '1.png',
+		image: '4.jpeg',
 	},
 ];
 
