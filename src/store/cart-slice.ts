@@ -46,15 +46,15 @@ const DUMMY_PRODUCTS: Product[] = [
 ];
 
 const initialState: CartState = {
-	items: [],
+	items: DUMMY_PRODUCTS,
 };
 
 const cartSlice = createSlice({
 	name: 'cart',
 	initialState,
 	reducers: {
-		addProduct(state, action) {},
-		removeProduct(state, action) {},
+		addProductToCart(state, action) {},
+		removeProductFromCart(state, action) {},
 	},
 });
 
