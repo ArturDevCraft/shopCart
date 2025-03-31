@@ -13,7 +13,6 @@ function App() {
 	return (
 		<>
 			<Header />
-			<button onClick={toggleCart}>Toggle cart view</button>
 			{cartIsVisible && <p>CART</p>}
 		</>
 	);

@@ -2,6 +2,7 @@ import { Component } from 'react';
 import classes from './Header.module.css';
 
 import { ReactComponent as Logo } from '../assets/logo.svg';
+import CartBtn from './CartBtn';
 
 class Header extends Component {
 	render() {
@@ -13,7 +14,9 @@ class Header extends Component {
 
 				<h1 className={classes.title}>Your the best shopping place</h1>
 
-				<div className={classes.uiActions}></div>
+				<div className={classes.actions}>
+					<CartBtn />
+				</div>
 			</header>
 		);
 	}
