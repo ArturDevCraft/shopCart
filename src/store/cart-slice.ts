@@ -8,8 +8,12 @@ interface Product {
 	image: string;
 }
 
+interface Item extends Product {
+	quantity: number;
+}
+
 interface CartState {
-	items: Product[];
+	items: Item[];
 }
 
 const DUMMY_PRODUCTS: Product[] = [
@@ -46,14 +50,20 @@ const DUMMY_PRODUCTS: Product[] = [
 ];
 
 const initialState: CartState = {
-	items: DUMMY_PRODUCTS,
+	items: [],
 };
 
 const cartSlice = createSlice({
 	name: 'cart',
 	initialState,
 	reducers: {
-		addProductToCart(state, action) {},
+		addProductToCart(state, action) {
+			const newProduct = action.payload;
+			const isInCart = state.items.find((item) => item.id === newProduct.id);
+
+			if (isInCart) {
+			}
+		},
 		removeProductFromCart(state, action) {},
 	},
 });
