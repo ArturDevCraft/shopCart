@@ -16,7 +16,7 @@ interface CartState {
 	items: Item[];
 }
 
-const DUMMY_PRODUCTS: Product[] = [
+export const DUMMY_PRODUCTS: Product[] = [
 	{
 		id: 1,
 		name: 'Wireless Earbuds',

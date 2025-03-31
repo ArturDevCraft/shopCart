@@ -1,7 +1,7 @@
-import React from 'react';
 import { useAppDispatch, useAppSelector } from './hooks';
 import { uiActions } from './store/ui-slice';
 import Header from './components/Header';
+import Products from './components/Products';
 
 function App() {
 	const dispatch = useAppDispatch();
@@ -14,6 +14,7 @@ function App() {
 		<>
 			<Header />
 			{cartIsVisible && <p>CART</p>}
+			<Products />
 		</>
 	);
 }
