@@ -1,0 +1,17 @@
+.modal {
+	background-color: #e4ddd4;
+	border-radius: 6px;
+	border: none;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.251);
+	padding: 2rem;
+	width: 80%;
+	max-width: 40rem;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.modal::backdrop {
+	background-color: rgba(0, 0, 0, 0.55);
+}

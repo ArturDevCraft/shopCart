@@ -10,6 +10,7 @@ const Products = () => {
 			<ul className={classes.list}>
 				{DUMMY_PRODUCTS.map((product) => (
 					<Product
+						key={product.id}
 						id={product.id}
 						name={product.name}
 						description={product.description}

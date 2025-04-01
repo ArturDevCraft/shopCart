@@ -1,0 +1,29 @@
+.actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
+}
+
+.actions button {
+	cursor: pointer;
+	border: none;
+	font-size: 1.5rem;
+	padding: 1rem 1.5rem;
+	border-radius: 1rem;
+	background-color: #646464;
+	color: #fff;
+	transition: 0.3s background-color, 0.3s scale;
+}
+
+.actions button:hover {
+	background-color: #6b7192;
+	scale: 1.1;
+}
+
+.items {
+	padding-bottom: 2rem;
+}
+.items li {
+	list-style-type: decimal;
+	margin-left: 2rem;
+}
