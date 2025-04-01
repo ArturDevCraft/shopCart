@@ -20,6 +20,7 @@ export const withProductDetails = <P extends ProductDetailsProps>(
 		const dispatch = useAppDispatch();
 		const prodDetailsId = useAppSelector((state) => state.ui.productIsVisible);
 		const closeDetails = () => {
+			setQuantity(1);
 			dispatch(uiActions.showProductDetails(0));
 		};
 
