@@ -88,6 +88,18 @@ const cartSlice = createSlice({
 				existingProduct.quantity--;
 			}
 		},
+		deleteProductFromCart(state, action) {
+			const id = action.payload;
+			const existingProduct: Item | undefined = state.items.find(
+				(item) => item.id === id
+			);
+
+			if (existingProduct?.quantity) {
+				state.items = state.items.filter(
+					(item) => item.id !== existingProduct.id
+				);
+			}
+		},
 		clearCart(state) {
 			state.items = [];
 		},

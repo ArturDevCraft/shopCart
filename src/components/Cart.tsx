@@ -17,12 +17,18 @@ const Cart = () => {
 		}
 	};
 
+	const handleDelete = (id: number) => {
+		dispatch(cartActions.deleteProductFromCart(id));
+	};
+
 	const handleDecrease = (id: number) => {
 		dispatch(cartActions.removeProductFromCart(id));
 	};
+
 	const handleIncrease = (item: ProdType) => {
 		dispatch(cartActions.addProductToCart({ ...item, quantity: 1 }));
 	};
+
 	const handlePlace = () => {
 		dispatch(cartActions.clearCart());
 		handleClose();
@@ -40,6 +46,7 @@ const Cart = () => {
 							<button onClick={() => handleDecrease(item.id)}>-</button>
 							<span>{item.quantity}</span>
 							<button onClick={() => handleIncrease(item)}>+</button>
+							<button onClick={() => handleDelete(item.id)}>remove</button>
 						</p>
 					</li>
 				))}
