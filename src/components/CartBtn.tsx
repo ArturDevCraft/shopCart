@@ -12,13 +12,19 @@ const CartBtn = () => {
 	};
 
 	const cartItems = useAppSelector((state) => state.cart.items);
-
+	let totalItems: number = 0;
+	if (cartItems) {
+		totalItems = cartItems.reduce((totalNumberOfItems, item) => {
+			return totalNumberOfItems + item.quantity;
+		}, 0);
+	}
 	return (
 		<button
 			className={`${classes.button} ${cartItems.length ? classes.active : ''}`}
 			onClick={handleClick}
 		>
 			<CartIco />
+			{totalItems !== 0 && <span className={classes.total}>{totalItems}</span>}
 		</button>
 	);
 };
