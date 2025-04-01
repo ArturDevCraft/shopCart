@@ -23,6 +23,10 @@ const Cart = () => {
 	const handleIncrease = (item: ProdType) => {
 		dispatch(cartActions.addProductToCart(item));
 	};
+	const handlePlace = () => {
+		dispatch(cartActions.clearCart());
+		handleClose();
+	};
 	return (
 		<Modal open={cartIsVisible} onClose={handleClose}>
 			<h2>Cart</h2>
@@ -42,7 +46,7 @@ const Cart = () => {
 			</ul>
 			<p className={classes.actions}>
 				<button onClick={handleClose}>Close</button>
-				<button onClick={handleClose}>Place an order</button>
+				<button onClick={handlePlace}>Place an order</button>
 			</p>
 		</Modal>
 	);
