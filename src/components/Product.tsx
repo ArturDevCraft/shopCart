@@ -1,6 +1,7 @@
 import { useAppDispatch } from '../hooks';
 import { cartActions } from '../store/cart-slice';
 import classes from './Product.module.css';
+import { ReactComponent as CartPlus } from '../assets/cartplus.svg';
 
 const Product: React.FC<{
 	id: number;
@@ -22,7 +23,7 @@ const Product: React.FC<{
 			<img className={classes.image} src={image} alt={name} />
 			<p className={classes.price}>${price}</p>
 			<button className={classes.button} onClick={handleAdd}>
-				Add to Cart
+				<CartPlus />
 			</button>
 		</li>
 	);
