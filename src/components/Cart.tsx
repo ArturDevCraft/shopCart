@@ -33,6 +33,11 @@ const Cart = () => {
 		dispatch(cartActions.clearCart());
 		handleClose();
 	};
+
+	const totalItems = items.reduce((totalPrice, item) => {
+		return totalPrice + item.quantity * item.price;
+	}, 0);
+
 	return (
 		<Modal open={cartIsVisible} onClose={handleClose}>
 			<h2>Cart</h2>
@@ -51,6 +56,8 @@ const Cart = () => {
 					</li>
 				))}
 			</ul>
+
+			<p>Total price: ${totalItems.toFixed(2)}</p>
 			<p className={classes.actions}>
 				<button onClick={handleClose}>Close</button>
 				<button onClick={handlePlace}>Place an order</button>
