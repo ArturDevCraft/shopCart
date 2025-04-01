@@ -1,12 +1,13 @@
 import { DUMMY_PRODUCTS } from '../store/cart-slice';
 import Product from './Product';
+import classes from './Products.module.css';
 
 const Products = () => {
 	return (
-		<section>
-			<h2>Select Your products</h2>
+		<section className={classes.products}>
+			<h2 className={classes.sectionTitle}>Select Your products</h2>
 
-			<ul>
+			<ul className={classes.list}>
 				{DUMMY_PRODUCTS.map((product) => (
 					<Product
 						id={product.id}

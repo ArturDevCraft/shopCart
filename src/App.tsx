@@ -6,9 +6,6 @@ import Products from './components/Products';
 function App() {
 	const dispatch = useAppDispatch();
 	const cartIsVisible = useAppSelector((state) => state.ui.cartIsVisible);
-	const toggleCart = () => {
-		dispatch(uiActions.toggleCart());
-	};
 
 	return (
 		<>
