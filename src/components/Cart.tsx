@@ -5,6 +5,7 @@ import Modal from './UI/Modal';
 import { cartActions } from '../store/cart-slice';
 
 import { Product as ProdType } from '../store/cart-slice';
+
 const Cart = () => {
 	const dispatch = useAppDispatch();
 	const cartIsVisible = useAppSelector((state) => state.ui.cartIsVisible);

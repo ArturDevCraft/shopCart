@@ -24,6 +24,24 @@
 	padding-bottom: 2rem;
 }
 .items li {
-	list-style-type: decimal;
 	margin-left: 2rem;
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+.itemActions {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.itemActions button {
+	border: none;
+	border-radius: 8px;
+	background-color: #646464;
+	padding: 1rem;
+	color: #fff;
+	cursor: pointer;
 }
