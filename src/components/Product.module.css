@@ -11,14 +11,42 @@
 	gap: 1rem;
 }
 
+.prodDetails {
+	list-style-type: none;
+	display: grid;
+	grid-template-areas:
+		'image title'
+		'image price'
+		'image button'
+		'image description'
+		'image description'
+		'image description';
+	padding: 2rem;
+	align-items: stretch;
+	justify-content: stretch;
+	gap: 1rem;
+}
+
+.prodDetails .title {
+	font-size: 3rem;
+	text-align: center;
+}
+
+.prodDetails .price {
+	font-size: 3rem;
+	text-align: center;
+}
+
 .title {
 	color: #646464;
 	grid-area: title;
+	cursor: pointer;
 }
 
 .image {
 	border-radius: 1.5rem;
 	grid-area: image;
+	cursor: pointer;
 }
 
 .price {

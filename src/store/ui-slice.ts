@@ -2,12 +2,12 @@ import { createSlice } from '@reduxjs/toolkit';
 
 interface UiState {
 	cartIsVisible: boolean;
-	productIsVisible: boolean;
+	productIsVisible: number;
 }
 
 const initialState: UiState = {
 	cartIsVisible: false,
-	productIsVisible: false,
+	productIsVisible: 0,
 };
 
 const uiSlice = createSlice({
@@ -17,8 +17,8 @@ const uiSlice = createSlice({
 		toggleCart(state) {
 			state.cartIsVisible = !state.cartIsVisible;
 		},
-		toggleProduct(state) {
-			state.productIsVisible = !state.productIsVisible;
+		showProductDetails(state, action) {
+			state.productIsVisible = action.payload;
 		},
 	},
 });

@@ -21,7 +21,7 @@ const Cart = () => {
 		dispatch(cartActions.removeProductFromCart(id));
 	};
 	const handleIncrease = (item: ProdType) => {
-		dispatch(cartActions.addProductToCart(item));
+		dispatch(cartActions.addProductToCart({ ...item, quantity: 1 }));
 	};
 	const handlePlace = () => {
 		dispatch(cartActions.clearCart());
